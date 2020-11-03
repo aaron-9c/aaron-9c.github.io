@@ -1,19 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aaron-9c.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-11-03T11:01:46.619Z</updated>
+    <title>9c的小破站</title>
+    <updated>2020-11-03T11:17:07.382Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aaron-9c.github.io"/>
     <link rel="self" href="https://aaron-9c.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://aaron-9c.github.io/images/avatar.png</logo>
     <icon>https://aaron-9c.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, 9c的小破站</rights>
+    <entry>
+        <title type="html"><![CDATA[webpack]]></title>
+        <id>https://aaron-9c.github.io/webpack/</id>
+        <link href="https://aaron-9c.github.io/webpack/">
+        </link>
+        <updated>2020-11-03T08:51:25.000Z</updated>
+        <summary type="html"><![CDATA[<p>webpack</p>
+<p><strong>mode</strong>：区分<strong>development</strong>和<strong>production</strong></p>
+<p><strong>entry</strong>：开始构建的入口模块<br>
+三种书写方式</p>
+<pre><code>entry: &quot;./src/index.jsx&quot;,
+entry：[.'/index1.jsx',  '/index2.jsx'],
+entry: [{
+    app:'./app.jsx',
+    app2:'./app2.jsx'
+}]</code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<p>webpack</p>
+<p><strong>mode</strong>：区分<strong>development</strong>和<strong>production</strong></p>
+<p><strong>entry</strong>：开始构建的入口模块<br>
+三种书写方式</p>
+<pre><code>entry: &quot;./src/index.jsx&quot;,
+entry：[.'/index1.jsx',  '/index2.jsx'],
+entry: [{
+    app:'./app.jsx',
+    app2:'./app2.jsx'
+}]
+</code></pre>
+<!-- more -->
+<p><strong>output</strong>：打包后的文件路径以及文件名</p>
+<p>const path = require('path');</p>
+<pre><code>output:{
+    path: path.resolve(__dirname, 'dist'),
+    filename:[name].[contenthash].js
+}
+</code></pre>
+<p><strong>loader</strong>：将文件转换为webpack能够处理的模块</p>
+<p>常用loader</p>
+<p><strong>js</strong>：babel-loader babel-core babel-preset-es2015 babel-preset-react</p>
+<pre><code>babel-loader: babel加载器
+
+babel-preset-es2015: 支持es2015
+
+babel-preset-react: jsx 转换成js
+</code></pre>
+<p><strong>css</strong>：style-loader，css-loader，less-loader，sass-lader<br>
+注意顺序</p>
+<p><strong>jpg</strong>：url-loader，file-loader</p>
+<pre><code>url-loader需要file-loader的支持,可通过配置项设置低于limit的图片进行base64编码，从而以减少http请求
+</code></pre>
+<p><strong>plugins</strong>：插件，是webpack功能的扩展，可以处理loader处理不了的任务</p>
+<pre><code>html-webpack-plugin：使用插件实现自动引入js、css，免于手动配置
+clean-webpack-plugin：生成dist目录前会删除其他文件
+
+const { CleanWebpackPlugin } = require(&quot;clean-webpack-plugin&quot;);
+注意clean-webpack-plugin引入方式
+</code></pre>
+<p><strong>module</strong>：</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://aaron-9c.github.io/post/hello-gridea/</id>
-        <link href="https://aaron-9c.github.io/post/hello-gridea/">
+        <id>https://aaron-9c.github.io/hello-gridea/</id>
+        <link href="https://aaron-9c.github.io/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
