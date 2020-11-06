@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aaron-9c.github.io</id>
     <title>9c的小破站</title>
-    <updated>2020-11-03T11:17:07.382Z</updated>
+    <updated>2020-11-06T11:47:04.957Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aaron-9c.github.io"/>
     <link rel="self" href="https://aaron-9c.github.io/atom.xml"/>
@@ -11,13 +11,58 @@
     <icon>https://aaron-9c.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 9c的小破站</rights>
     <entry>
+        <title type="html"><![CDATA[书签]]></title>
+        <id>https://aaron-9c.github.io/shu-qian/</id>
+        <link href="https://aaron-9c.github.io/shu-qian/">
+        </link>
+        <updated>2020-11-06T07:58:49.000Z</updated>
+        <content type="html"><![CDATA[<p>leetcode刷题 ： https://leetcode-cn.com/circle/article/qDaN1Y/<br>
+科学：https://glados.work<br>
+主题：https://lixianhua.com<br>
+typeCho：http://typecho.org<br>
+nei mock ： https://nei.netease.com<br>
+关于node：https://www.zhihu.com/question/33578075<br>
+leetCode Git : https://github.com/azl397985856<br>
+填表联系动态规划：https://alchemist-al.com/algorithms/is-subsequence</p>
+<p>解决WSS报错: http://www.blogdaren.com/post-2456.html?from=groupmessage<br>
+随机验证码：https://github.com/F-happy/verification-code<br>
+布局 http://www.ruanyifeng.com/blog/2020/08/five-css-layouts-in-one-line.html<br>
+学习路线： https://segmentfault.com/a/1190000019466160?utm_source=sf-related<br>
+网易云： https://github.com/x-orpheus/blog<br>
+WebSocket在线测试工具： http://ws.douqq.com/<br>
+指南leetcode：https://juejin.im/post/6847009772500156429<br>
+背包九讲： https://tangshusen.me/2019/11/24/knapsack-problem/</p>
+<p>知乎hooks fe： https://www.zhihu.com/question/357020049/answer/909484669<br>
+hooks体系：https://react.docschina.org/blog/2020/08/21/react-hooks-extra-level-of-indirection.html<br>
+3个hooks APi区别：https://www.jianshu.com/p/94ace269414d<br>
+Hooks Capture Value 特性：https://segmentfault.com/a/1190000018685253?utm_source=tag-newest<br>
+class&amp;fn 区别：https://github.com/dt-fe/weekly/blob/master/95.精读《Function%20VS%20Class%20组件》.md<br>
+Hooks造轮子：https://github.com/dt-fe/weekly/blob/master/80.精读《怎么用%20React%20Hooks%20造轮子》.md<br>
+Memo &amp; useMemo 进行性能优化：http://www.ptbird.cn/react-hook-useMemo-purerender.html<br>
+useEffect 完整指南：https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/<br>
+react技术：https://react.iamkasong.com/#%E5%AF%BC%E5%AD%A6%E8%A7%86%E9%A2%91</p>
+<p>动态规划 https://blog.csdn.net/baidu_28312631/article/details/47418773?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param</p>
+<p>药板娘: https://nocilol.me/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-01/</p>
+<p>面板跳转：https://www.fghrsh.net/post/123.html</p>
+<p>Zpix字体<br>
+https://react.docschina.org/blog/2020/08/21/react-hooks-extra-level-of-indirection.html</p>
+<p>Gride: https://gridea.dev/#started</p>
+<p>一些不错的文章：https://github.com/chokcoco/cnblogsArticle<br>
+webpack：https://www.cnblogs.com/raion/p/8053799.html<br>
+夜尽天明blog：https://biaochenxuying.cn/articles<br>
+前端导航：https://www.kwgg2020.com<br>
+技术胖：https://www.jspang.com</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[webpack]]></title>
         <id>https://aaron-9c.github.io/webpack/</id>
         <link href="https://aaron-9c.github.io/webpack/">
         </link>
         <updated>2020-11-03T08:51:25.000Z</updated>
-        <summary type="html"><![CDATA[<p>webpack</p>
-<p><strong>mode</strong>：区分<strong>development</strong>和<strong>production</strong></p>
+        <summary type="html"><![CDATA[<p>webpack<br>
+构建工具</p>
+<p><strong>mode</strong>：根据环境做不同配置，eg区分<strong>development</strong>和<strong>production</strong></p>
 <p><strong>entry</strong>：开始构建的入口模块<br>
 三种书写方式</p>
 <pre><code>entry: &quot;./src/index.jsx&quot;,
@@ -27,8 +72,9 @@ entry: [{
     app2:'./app2.jsx'
 }]</code></pre>
 ]]></summary>
-        <content type="html"><![CDATA[<p>webpack</p>
-<p><strong>mode</strong>：区分<strong>development</strong>和<strong>production</strong></p>
+        <content type="html"><![CDATA[<p>webpack<br>
+构建工具</p>
+<p><strong>mode</strong>：根据环境做不同配置，eg区分<strong>development</strong>和<strong>production</strong></p>
 <p><strong>entry</strong>：开始构建的入口模块<br>
 三种书写方式</p>
 <pre><code>entry: &quot;./src/index.jsx&quot;,
@@ -68,6 +114,11 @@ const { CleanWebpackPlugin } = require(&quot;clean-webpack-plugin&quot;);
 注意clean-webpack-plugin引入方式
 </code></pre>
 <p><strong>module</strong>：</p>
+<p><strong>devServer</strong>:<br>
+devServer: {<br>
+contentBase: path.join(__dirname, &quot;dist&quot;)<br>
+}<br>
+contentBase是加载哪里的资源</p>
 ]]></content>
     </entry>
     <entry>

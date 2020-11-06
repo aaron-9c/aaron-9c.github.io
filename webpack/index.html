@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>webpack | 9c的小破站</title>
-<link rel="shortcut icon" href="https://aaron-9c.github.io/favicon.ico?v=1604402218698">
+<link rel="shortcut icon" href="https://aaron-9c.github.io/favicon.ico?v=1604663223029">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://aaron-9c.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="webpack | 9c的小破站 - Atom Feed" href="https://aaron-9c.github.io/atom.xml">
@@ -12,11 +12,12 @@
 
 
     <meta name="description" content="webpack
-mode：区分development和production
+构建工具
+mode：根据环境做不同配置，eg区分development和production
 entry：开始构建的入口模块
 三种书写方式
 entry: &quot;./src/index.jsx&quot;,
-entry：[.'/index1.jsx', ..." />
+entry：..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -26,7 +27,7 @@ entry：[.'/index1.jsx', ..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://aaron-9c.github.io">
-  <img class="avatar" src="https://aaron-9c.github.io/images/avatar.png?v=1604402218698" alt="">
+  <img class="avatar" src="https://aaron-9c.github.io/images/avatar.png?v=1604663223029" alt="">
   </a>
   <h1 class="site-title">
     9c的小破站
@@ -113,8 +114,9 @@ entry：[.'/index1.jsx', ..." />
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>webpack</p>
-<p><strong>mode</strong>：区分<strong>development</strong>和<strong>production</strong></p>
+                <p>webpack<br>
+构建工具</p>
+<p><strong>mode</strong>：根据环境做不同配置，eg区分<strong>development</strong>和<strong>production</strong></p>
 <p><strong>entry</strong>：开始构建的入口模块<br>
 三种书写方式</p>
 <pre><code>entry: &quot;./src/index.jsx&quot;,
@@ -154,6 +156,11 @@ const { CleanWebpackPlugin } = require(&quot;clean-webpack-plugin&quot;);
 注意clean-webpack-plugin引入方式
 </code></pre>
 <p><strong>module</strong>：</p>
+<p><strong>devServer</strong>:<br>
+devServer: {<br>
+contentBase: path.join(__dirname, &quot;dist&quot;)<br>
+}<br>
+contentBase是加载哪里的资源</p>
 
               </div>
               <div class="toc-container">
