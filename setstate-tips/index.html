@@ -2,20 +2,22 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>webpack | 9c的小破站</title>
+<title> some Tips | 9c的小破站</title>
 <link rel="shortcut icon" href="https://aaron-9c.github.io/favicon.ico?v=1605264420958">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://aaron-9c.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="webpack | 9c的小破站 - Atom Feed" href="https://aaron-9c.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title=" some Tips | 9c的小破站 - Atom Feed" href="https://aaron-9c.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="可以参考简书作者 戈德斯文：https://www.jianshu.com/p/bc747e3d8a7c
-webpack
-构建工具
-mode：根据环境做不同配置，eg区分development和production
-entry：开始构建的入..." />
+    <meta name="description" content="##setState
+以回调的形式写setState ，代表
+React只会在第一个渲染期间调用此函数
+setTimeout
+因为react 的 capture value特性
+setTImeout输出的时执行setTimeout时的值
+s..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -98,11 +100,11 @@ entry：开始构建的入..." />
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              webpack
+               some Tips
             </h2>
             <div class="post-info">
               <span>
-                2020-11-03
+                2020-11-13
               </span>
               <span>
                 2 min read
@@ -112,54 +114,48 @@ entry：开始构建的入..." />
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>可以参考简书作者 戈德斯文：<a href="https://www.jianshu.com/p/bc747e3d8a7c">https://www.jianshu.com/p/bc747e3d8a7c</a></p>
-<p>webpack<br>
-构建工具</p>
-<p><strong>mode</strong>：根据环境做不同配置，eg区分<strong>development</strong>和<strong>production</strong></p>
-<p><strong>entry</strong>：开始构建的入口模块<br>
-三种书写方式</p>
-<pre><code>entry: &quot;./src/index.jsx&quot;,
-entry：[.'/index1.jsx',  '/index2.jsx'],
-entry: [{
-    app:'./app.jsx',
-    app2:'./app2.jsx'
-}]
-</code></pre>
-<!-- more -->
-<p><strong>output</strong>：打包后的文件路径以及文件名</p>
-<p>const path = require('path');</p>
-<pre><code>output:{
-    path: path.resolve(__dirname, 'dist'),
-    filename:[name].[contenthash].js
+                <p>##setState</p>
+<p>以回调的形式写setState ，代表<br>
+React只会在第一个渲染期间调用此函数</p>
+<p>setTimeout</p>
+<p>因为react 的 capture value特性</p>
+<p>setTImeout输出的时执行setTimeout时的值</p>
+<p>setInterval</p>
+<p>setState count值永远为1</p>
+<p>地址：<a href="https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies">https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies</a></p>
+<p>这样写存在闭包问题<br>
+function Counter() {<br>
+const [count, setCount] = useState(0);</p>
+<pre><code>useEffect(() =&gt; {
+    const id = setInterval(() =&gt; {
+    setCount(count + 1); // This effect depends on the `count` state
+    }, 1000);
+    return () =&gt; clearInterval(id);
+}, []); // 🔴 Bug: `count` is not specified as a dependency
+
+return &lt;h1&gt;{count}&lt;/h1&gt;;
 }
 </code></pre>
-<p><strong>loader</strong>：将文件转换为webpack能够处理的模块</p>
-<p>常用loader</p>
-<p><strong>js</strong>：babel-loader babel-core babel-preset-es2015 babel-preset-react</p>
-<pre><code>babel-loader: babel加载器
+<p>回调中调用，count =&gt; cout + 1 即可</p>
+<pre><code>function Counter() {
+const [count, setCount] = useState(0);
 
-babel-preset-es2015: 支持es2015
+useEffect(() =&gt; {
+    const id = setInterval(() =&gt; {
+    setCount(c =&gt; c + 1); // ✅ This doesn't depend on `count` variable outside
+    }, 1000);
+    return () =&gt; clearInterval(id);
+}, []); // ✅ Our effect doesn't use any variables in the component scope
 
-babel-preset-react: jsx 转换成js
+return &lt;h1&gt;{count}&lt;/h1&gt;;
+}
 </code></pre>
-<p><strong>css</strong>：style-loader，css-loader，less-loader，sass-lader<br>
-注意顺序</p>
-<p><strong>jpg</strong>：url-loader，file-loader</p>
-<pre><code>url-loader需要file-loader的支持,可通过配置项设置低于limit的图片进行base64编码，从而以减少http请求
-</code></pre>
-<p><strong>plugins</strong>：插件，是webpack功能的扩展，可以处理loader处理不了的任务</p>
-<pre><code>html-webpack-plugin：使用插件实现自动引入js、css，免于手动配置
-clean-webpack-plugin：生成dist目录前会删除其他文件
-
-const { CleanWebpackPlugin } = require(&quot;clean-webpack-plugin&quot;);
-注意clean-webpack-plugin引入方式
-</code></pre>
-<p><strong>module</strong>：</p>
-<p><strong>devServer</strong>:<br>
-devServer: {<br>
-contentBase: path.join(__dirname, &quot;dist&quot;)<br>
-}<br>
-contentBase是加载哪里的资源</p>
+<p>##useReducer</p>
+<p>React在比较oldState和newState的时候是使用Object.is函数，如果是同一个对象则不会触发组件的rerender。</p>
+<p>处理较为复杂的state操作逻辑</p>
+<p>如果出现reducer打印undefined，或者没有变，检查case「是否匹配」。<br>
+情况1=&gt;没有设定设置default默认返回state，报错打印undefined<br>
+情况2=&gt;如果设置了默认返回state，打印默认state</p>
 
               </div>
               <div class="toc-container">
@@ -169,6 +165,15 @@ contentBase是加载哪里的资源</p>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://aaron-9c.github.io/lodash/">
+              <h3 class="post-title">
+                lodash
+              </h3>
+            </a>
+          </div>
         
 
         

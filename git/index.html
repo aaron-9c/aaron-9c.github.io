@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>git | 9c的小破站</title>
-<link rel="shortcut icon" href="https://aaron-9c.github.io/favicon.ico?v=1604914659454">
+<link rel="shortcut icon" href="https://aaron-9c.github.io/favicon.ico?v=1605264420958">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://aaron-9c.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="git | 9c的小破站 - Atom Feed" href="https://aaron-9c.github.io/atom.xml">
@@ -14,8 +14,8 @@
     <meta name="description" content="git checkout -b dev orign/dev
 创建与远程分支同名并链接的本地分支
 git reset --hard
-git reflog  查看所有commit
-git commit --amend 用法详解：https://..." />
+git reflog  查看所有操作
+git commit --amend 用法详解：https://zhua..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -25,7 +25,7 @@ git commit --amend 用法详解：https://..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://aaron-9c.github.io">
-  <img class="avatar" src="https://aaron-9c.github.io/images/avatar.png?v=1604914659454" alt="">
+  <img class="avatar" src="https://aaron-9c.github.io/images/avatar.png?v=1605264420958" alt="">
   </a>
   <h1 class="site-title">
     9c的小破站
@@ -105,7 +105,7 @@ git commit --amend 用法详解：https://..." />
                 2020-11-06
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
               
             </div>
@@ -115,11 +115,45 @@ git commit --amend 用法详解：https://..." />
                 <p>git checkout -b dev orign/dev</p>
 <p>创建与远程分支同名并链接的本地分支</p>
 <p>git reset --hard</p>
-<p>git reflog  查看所有commit</p>
-<p>git commit --amend 用法详解：https://zhuanlan.zhihu.com/p/100243017</p>
-<p>Icode常用命令  http://wiki.baidu.com/pages/viewpage.action?pageId=706323725</p>
-<p>git rebase 用法详解: https://www.cnblogs.com/pinefantasy/articles/6287147.html</p>
-<p>将git中多次commit合并成一个commit https://blog.csdn.net/u013276277/article/details/82470177</p>
+<p>git reflog  查看所有操作</p>
+<p>git commit --amend 用法详解：<a href="https://zhuanlan.zhihu.com/p/100243017">https://zhuanlan.zhihu.com/p/100243017</a></p>
+<p>Icode常用命令：<a href="http://wiki.baidu.com/pages/viewpage.action?pageId=706323725">http://wiki.baidu.com/pages/viewpage.action?pageId=706323725</a></p>
+<p>git rebase 用法详解: <a href="https://www.cnblogs.com/pinefantasy/articles/6287147.html">https://www.cnblogs.com/pinefantasy/articles/6287147.html</a></p>
+<p>将git中多次commit合并成一个commit： <a href="https://blog.csdn.net/u013276277/article/details/82470177">https://blog.csdn.net/u013276277/article/details/82470177</a></p>
+<p>git教程（monkey 🐵）： <a href="https://backlog.com/git-tutorial/tw/stepup/stepup7_7.html">https://backlog.com/git-tutorial/tw/stepup/stepup7_7.html</a></p>
+<p>##😆总结：</p>
+<p>修改最近的提交<br>
+Af：</p>
+<pre><code>git add .
+git commit -m  '1'
+git commit -m '2'
+</code></pre>
+<p>Now：</p>
+<pre><code>git add .
+git commit -m '1'
+git commit --amend
+(i进入编辑模式  然后esc退出编辑模式，:wq保存退出)
+</code></pre>
+<p>git reset<br>
+git reset --hard HEAD~~</p>
+<p>git reset 后的补救<br>
+git reset --hard ORIG_HEAD</p>
+<p>Git rebase</p>
+<pre><code>比如 git rebase -i HEAD~~
+
+(HEAD~~ : commit Id ， ~ 代表上一个commmit，~~ 代表上上个... )
+pick改为  s： 合并提交 ，e：修改当前commmit 然后通过
+git rebase --continue 继续提交
+</code></pre>
+<p>将dev分支所有commit合并成1个commit来merge<br>
+git merge --squash dev</p>
+<p>添加标签<br>
+git tag apple</p>
+<p>添加标识标签<br>
+git tag -am &quot;这是一条备注&quot; banana</p>
+<p>取消上次提交<br>
+git revert HEAD<br>
+git fetch origin master</p>
 
               </div>
               <div class="toc-container">
