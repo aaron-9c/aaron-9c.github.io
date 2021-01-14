@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>git | 9c的小破站</title>
-<link rel="shortcut icon" href="https://aaron-9c.github.io/favicon.ico?v=1605264420958">
+<link rel="shortcut icon" href="https://aaron-9c.github.io/favicon.ico?v=1610622955050">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://aaron-9c.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="git | 9c的小破站 - Atom Feed" href="https://aaron-9c.github.io/atom.xml">
@@ -11,11 +11,10 @@
 
 
 
-    <meta name="description" content="git checkout -b dev orign/dev
-创建与远程分支同名并链接的本地分支
-git reset --hard
-git reflog  查看所有操作
-git commit --amend 用法详解：https://zhua..." />
+    <meta name="description" content="创建与远程分支同名并链接的本地分支
+git checkout --track origin/branch_name
+如果本地新建了一个分支 branch_name，但是在远程没有
+git push --set-upstream origin..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -25,7 +24,7 @@ git commit --amend 用法详解：https://zhua..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://aaron-9c.github.io">
-  <img class="avatar" src="https://aaron-9c.github.io/images/avatar.png?v=1605264420958" alt="">
+  <img class="avatar" src="https://aaron-9c.github.io/images/avatar.png?v=1610622955050" alt="">
   </a>
   <h1 class="site-title">
     9c的小破站
@@ -112,10 +111,14 @@ git commit --amend 用法详解：https://zhua..." />
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>git checkout -b dev orign/dev</p>
-<p>创建与远程分支同名并链接的本地分支</p>
-<p>git reset --hard</p>
-<p>git reflog  查看所有操作</p>
+                <p>创建与远程分支同名并链接的本地分支<br>
+git checkout --track origin/branch_name</p>
+<p>如果本地新建了一个分支 branch_name，但是在远程没有<br>
+git push --set-upstream origin branch_name</p>
+<p>查看所有操作<br>
+git reflog</p>
+<p>跳转到git某次操作<br>
+git reset --hard</p>
 <p>git commit --amend 用法详解：<a href="https://zhuanlan.zhihu.com/p/100243017">https://zhuanlan.zhihu.com/p/100243017</a></p>
 <p>Icode常用命令：<a href="http://wiki.baidu.com/pages/viewpage.action?pageId=706323725">http://wiki.baidu.com/pages/viewpage.action?pageId=706323725</a></p>
 <p>git rebase 用法详解: <a href="https://www.cnblogs.com/pinefantasy/articles/6287147.html">https://www.cnblogs.com/pinefantasy/articles/6287147.html</a></p>
@@ -154,6 +157,17 @@ git tag -am &quot;这是一条备注&quot; banana</p>
 <p>取消上次提交<br>
 git revert HEAD<br>
 git fetch origin master</p>
+<p>error</p>
+<pre><code> ! [remote rejected] **** -&gt; ***** (change 24610 closed)
+
+ git reset --soft e322323(这个事)
+</code></pre>
+<p>git缩写全局配置</p>
+<pre><code>git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.br branch
+</code></pre>
 
               </div>
               <div class="toc-container">

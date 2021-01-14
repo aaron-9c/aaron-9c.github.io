@@ -2,14 +2,94 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aaron-9c.github.io</id>
     <title>9c的小破站</title>
-    <updated>2020-11-13T10:47:08.491Z</updated>
+    <updated>2021-01-14T11:16:13.549Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aaron-9c.github.io"/>
     <link rel="self" href="https://aaron-9c.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://aaron-9c.github.io/images/avatar.png</logo>
     <icon>https://aaron-9c.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 9c的小破站</rights>
+    <rights>All rights reserved 2021, 9c的小破站</rights>
+    <entry>
+        <title type="html"><![CDATA[about Android]]></title>
+        <id>https://aaron-9c.github.io/about-android/</id>
+        <link href="https://aaron-9c.github.io/about-android/">
+        </link>
+        <updated>2021-01-07T03:58:34.000Z</updated>
+        <content type="html"><![CDATA[<p>谷歌调试(必须能正常访问谷歌): chrome://inspect/#devices</p>
+<p>h5更新代码发布后，安卓一定要清空下缓存，不然修改代码的页面可能不生效，会有缓存冲突</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[fix]]></title>
+        <id>https://aaron-9c.github.io/fix/</id>
+        <link href="https://aaron-9c.github.io/fix/">
+        </link>
+        <updated>2020-12-08T06:02:17.000Z</updated>
+        <content type="html"><![CDATA[<p>浏览器16.6ms 60hz 刷新<br>
+abcd</p>
+<p>可中断异步<br>
+渲染map一部分or</p>
+<p>index作key 适用于无改变数组</p>
+<p>渲染父容器不要 &amp;&amp; <div><br>
+【】.map</p>
+</div>
+不然key也有问题
+index作key的缺点在于插入删除后后继key全部失效，双缓存就没有意义了
+<p>快速了解React的新功能Suspense和Hooks : https://www.zhihu.com/lives/1051824303045246976</p>
+<p>https://zhuanlan.zhihu.com/advancing-react</p>
+<p>https://zhuanlan.zhihu.com/advancing-react</p>
+<pre><code>在render阶段的生命周期函数，因为Fiber的设计特点，可能会被打断，被打断之后，会重新被调用；而commit阶段一旦开始，就绝不会被打断，波形图与-_____-图</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[上下箭头]]></title>
+        <id>https://aaron-9c.github.io/shang-xia-jian-tou/</id>
+        <link href="https://aaron-9c.github.io/shang-xia-jian-tou/">
+        </link>
+        <updated>2020-11-30T09:33:33.000Z</updated>
+        <content type="html"><![CDATA[<p>.arrow-top {<br>
+position: relative;<br>
+height: 0px;<br>
+width: 0px;<br>
+margin: 5px auto;<br>
+margin-top: 0;<br>
+border-left: 4px solid transparent;<br>
+border-right: 4px solid transparent;<br>
+border-bottom: 5px solid #108cee;<br>
+cursor: pointer;<br>
+}<br>
+.arrow-top:after {<br>
+content: &quot;&quot;;<br>
+position: absolute;<br>
+left: -3px;<br>
+top: 2px;<br>
+border-left: 3px solid transparent;<br>
+border-right: 3px solid transparent;<br>
+border-bottom: 4px solid white;<br>
+}</p>
+<p>.arrow-down {<br>
+position: relative;<br>
+height: 0px;<br>
+width: 0px;<br>
+margin: 5px auto;<br>
+margin-bottom: 0;<br>
+border-left: 4px solid transparent;<br>
+border-right: 4px solid transparent;<br>
+border-top: 5px solid #108cee;<br>
+cursor: pointer;<br>
+}<br>
+.arrow-down:after {<br>
+content: &quot;&quot;;<br>
+position: absolute;<br>
+left: -3px;<br>
+bottom: 2px;<br>
+border-left: 3px solid transparent;<br>
+border-right: 3px solid transparent;<br>
+border-top: 4px solid white;<br>
+}</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ some Tips]]></title>
         <id>https://aaron-9c.github.io/setstate-tips/</id>
@@ -53,11 +133,15 @@ return &lt;h1&gt;{count}&lt;/h1&gt;;
 }
 </code></pre>
 <p>##useReducer</p>
-<p>React在比较oldState和newState的时候是使用Object.is函数，如果是同一个对象则不会触发组件的rerender。</p>
+<p>React在比较oldState和newState的时候是使用Object.is函数，如果是同一个对象则不会触发组件的rerender。<br>
+（Object.is 跟 === 相似，区别在于NAN在Object.is中是相等的，+0和-0是不相等的，这两项在        === 中相反）</p>
 <p>处理较为复杂的state操作逻辑</p>
 <p>如果出现reducer打印undefined，或者没有变，检查case「是否匹配」。<br>
 情况1=&gt;没有设定设置default默认返回state，报错打印undefined<br>
 情况2=&gt;如果设置了默认返回state，打印默认state</p>
+<p>##useCallBack</p>
+<p>useCallBack随着依赖的改变会生成不同的引用地址，<br>
+与useEffect区别</p>
 ]]></content>
     </entry>
     <entry>
@@ -83,9 +167,10 @@ _.random(2, 5, true)<br>
         </link>
         <updated>2020-11-06T07:58:49.000Z</updated>
         <content type="html"><![CDATA[<p>#Some Page</p>
+<p>聪明的问题：<a href="http://www.catb.org/~esr/faqs/smart-questions.html">http://www.catb.org/~esr/faqs/smart-questions.html</a></p>
 <p>mac下镜像飞速安装Homebrew教程：<a href="https://zhuanlan.zhihu.com/p/90508170">https://zhuanlan.zhihu.com/p/90508170</a><br>
 leetcode刷题 ： <a href="https://leetcode-cn.com/circle/article/qDaN1Y/">https://leetcode-cn.com/circle/article/qDaN1Y/</a><br>
-科学：<a href="%5Bhttps://glados.work">https://glados.work</a><br>
+科学：<a href="%5Bhttps://github.com/glados-network/GLaDOS">https://github.com/glados-network/GLaDOS</a><br>
 主题：<a href="https://lixianhua.com">https://lixianhua.com</a><br>
 typeCho：<a href="http://typecho.org">http://typecho.org</a><br>
 nei mock ：<a href="https://nei.netease.com">https://nei.netease.com</a><br>
@@ -102,6 +187,8 @@ WebSocket在线测试工具： <a href="http://ws.douqq.com/">http://ws.douqq.c
 背包九讲： <a href="https://tangshusen.me/2019/11/24/knapsack-problem/">https://tangshusen.me/2019/11/24/knapsack-problem/</a></p>
 <p>#HOOKS</p>
 <!-- Hooks -->
+<p>class&amp;Hooks优缺<a href="https://zhuanlan.zhihu.com/p/98554943">https://zhuanlan.zhihu.com/p/98554943</a></p>
+<p>useCallBack&amp;useMemo<a href="https://zhuanlan.zhihu.com/p/85969406">https://zhuanlan.zhihu.com/p/85969406</a></p>
 <p>知乎hooks fe： <a href="https://www.zhihu.com/question/357020049/answer/909484669">https://www.zhihu.com/question/357020049/answer/909484669</a></p>
 <p>hooks体系：<a href="https://react.docschina.org/blog/2020/08/21/react-hooks-extra-level-of-indirection.html">https://react.docschina.org/blog/2020/08/21/react-hooks-extra-level-of-indirection.html</a></p>
 <p>3个hooks APi区别：<a href="https://www.jianshu.com/p/94ace269414d">https://www.jianshu.com/p/94ace269414d</a></p>
@@ -109,6 +196,7 @@ WebSocket在线测试工具： <a href="http://ws.douqq.com/">http://ws.douqq.c
 <p>class&amp;fn 区别：<a href="https://github.com/dt-fe/weekly/blob/master/95.%E7%B2%BE%E8%AF%BB%E3%80%8AFunction%20VS%20Class%20%E7%BB%84%E4%BB%B6%E3%80%8B.md">https://github.com/dt-fe/weekly/blob/master/95.精读《Function%20VS%20Class%20组件》.md</a></p>
 <p>Hooks造轮子：<a href="https://github.com/dt-fe/weekly/blob/master/80.%E7%B2%BE%E8%AF%BB%E3%80%8A%E6%80%8E%E4%B9%88%E7%94%A8%20React%20Hooks%20%E9%80%A0%E8%BD%AE%E5%AD%90%E3%80%8B.md">https://github.com/dt-fe/weekly/blob/master/80.%E7%B2%BE%E8%AF%BB%E3%80%8A%E6%80%8E%E4%B9%88%E7%94%A8%20React%20Hooks%20%E9%80%A0%E8%BD%AE%E5%AD%90%E3%80%8B.md</a></p>
 <p>Memo &amp; useMemo 进行性能优化：<a href="http://www.ptbird.cn/react-hook-useMemo-purerender.html">http://www.ptbird.cn/react-hook-useMemo-purerender.html</a></p>
+<p>useMemo举例：[(https://segmentfault.com/a/1190000018697490?utm_source=tag-newest)]</p>
 <p>useEffect 完整指南：<a href="https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/">https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/</a></p>
 <p>react技术：<a href="https://react.iamkasong.com/#%E5%AF%BC%E5%AD%A6%E8%A7%86%E9%A2%91">https://react.iamkasong.com/#%E5%AF%BC%E5%AD%A6%E8%A7%86%E9%A2%91</a></p>
 <p>#Set Blog</p>
@@ -123,6 +211,10 @@ webpack：<a href="https://www.cnblogs.com/raion/p/8053799.html">https://www.cnb
 夜尽天明blog：<a href="https://biaochenxuying.cn/articles">https://biaochenxuying.cn/articles</a><br>
 前端导航：<a href="https://www.kwgg2020.com">https://www.kwgg2020.com</a><br>
 技术胖：<a href="https://www.jspang.com">https://www.jspang.com</a></p>
+<p>蝴蝶教程：<a href="https://www.jc2182.com/html/html-jiaocheng.html">https://www.jc2182.com/html/html-jiaocheng.html</a></p>
+<p>前端指南（hooks网站）：<a href="https://fe.rualc.com/note/react-hooks.html#hooks-jian-jie">https://fe.rualc.com/note/react-hooks.html#hooks-jian-jie</a></p>
+<p>Blog（blackBG）：<a href="https://www.sweetalkos.com/post/121">https://www.sweetalkos.com/post/121</a></p>
+<p>做一下这个（技术文？）：<a href="https://blog.csdn.net/yehuozhili/article/details/106562357">https://blog.csdn.net/yehuozhili/article/details/106562357</a></p>
 ]]></content>
     </entry>
     <entry>
@@ -131,10 +223,14 @@ webpack：<a href="https://www.cnblogs.com/raion/p/8053799.html">https://www.cnb
         <link href="https://aaron-9c.github.io/git/">
         </link>
         <updated>2020-11-06T03:12:36.000Z</updated>
-        <content type="html"><![CDATA[<p>git checkout -b dev orign/dev</p>
-<p>创建与远程分支同名并链接的本地分支</p>
-<p>git reset --hard</p>
-<p>git reflog  查看所有操作</p>
+        <content type="html"><![CDATA[<p>创建与远程分支同名并链接的本地分支<br>
+git checkout --track origin/branch_name</p>
+<p>如果本地新建了一个分支 branch_name，但是在远程没有<br>
+git push --set-upstream origin branch_name</p>
+<p>查看所有操作<br>
+git reflog</p>
+<p>跳转到git某次操作<br>
+git reset --hard</p>
 <p>git commit --amend 用法详解：<a href="https://zhuanlan.zhihu.com/p/100243017">https://zhuanlan.zhihu.com/p/100243017</a></p>
 <p>Icode常用命令：<a href="http://wiki.baidu.com/pages/viewpage.action?pageId=706323725">http://wiki.baidu.com/pages/viewpage.action?pageId=706323725</a></p>
 <p>git rebase 用法详解: <a href="https://www.cnblogs.com/pinefantasy/articles/6287147.html">https://www.cnblogs.com/pinefantasy/articles/6287147.html</a></p>
@@ -173,6 +269,17 @@ git tag -am &quot;这是一条备注&quot; banana</p>
 <p>取消上次提交<br>
 git revert HEAD<br>
 git fetch origin master</p>
+<p>error</p>
+<pre><code> ! [remote rejected] **** -&gt; ***** (change 24610 closed)
+
+ git reset --soft e322323(这个事)
+</code></pre>
+<p>git缩写全局配置</p>
+<pre><code>git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.br branch
+</code></pre>
 ]]></content>
     </entry>
     <entry>

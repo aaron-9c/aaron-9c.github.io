@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title> some Tips | 9c的小破站</title>
-<link rel="shortcut icon" href="https://aaron-9c.github.io/favicon.ico?v=1605264420958">
+<link rel="shortcut icon" href="https://aaron-9c.github.io/favicon.ico?v=1610622955050">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://aaron-9c.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title=" some Tips | 9c的小破站 - Atom Feed" href="https://aaron-9c.github.io/atom.xml">
@@ -27,7 +27,7 @@ s..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://aaron-9c.github.io">
-  <img class="avatar" src="https://aaron-9c.github.io/images/avatar.png?v=1605264420958" alt="">
+  <img class="avatar" src="https://aaron-9c.github.io/images/avatar.png?v=1610622955050" alt="">
   </a>
   <h1 class="site-title">
     9c的小破站
@@ -151,11 +151,15 @@ return &lt;h1&gt;{count}&lt;/h1&gt;;
 }
 </code></pre>
 <p>##useReducer</p>
-<p>React在比较oldState和newState的时候是使用Object.is函数，如果是同一个对象则不会触发组件的rerender。</p>
+<p>React在比较oldState和newState的时候是使用Object.is函数，如果是同一个对象则不会触发组件的rerender。<br>
+（Object.is 跟 === 相似，区别在于NAN在Object.is中是相等的，+0和-0是不相等的，这两项在        === 中相反）</p>
 <p>处理较为复杂的state操作逻辑</p>
 <p>如果出现reducer打印undefined，或者没有变，检查case「是否匹配」。<br>
 情况1=&gt;没有设定设置default默认返回state，报错打印undefined<br>
 情况2=&gt;如果设置了默认返回state，打印默认state</p>
+<p>##useCallBack</p>
+<p>useCallBack随着依赖的改变会生成不同的引用地址，<br>
+与useEffect区别</p>
 
               </div>
               <div class="toc-container">

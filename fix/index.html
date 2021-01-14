@@ -2,20 +2,25 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>webpack | 9c的小破站</title>
+<title>fix | 9c的小破站</title>
 <link rel="shortcut icon" href="https://aaron-9c.github.io/favicon.ico?v=1610622955050">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://aaron-9c.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="webpack | 9c的小破站 - Atom Feed" href="https://aaron-9c.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="fix | 9c的小破站 - Atom Feed" href="https://aaron-9c.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="可以参考简书作者 戈德斯文：https://www.jianshu.com/p/bc747e3d8a7c
-webpack
-构建工具
-mode：根据环境做不同配置，eg区分development和production
-entry：开始构建的入..." />
+    <meta name="description" content="浏览器16.6ms 60hz 刷新
+abcd
+可中断异步
+渲染map一部分or
+index作key 适用于无改变数组
+渲染父容器不要 &amp;&amp; 
+【】.map
+
+不然key也有问题
+index作key的缺点在于插入删除后后继ke..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -98,68 +103,34 @@ entry：开始构建的入..." />
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              webpack
+              fix
             </h2>
             <div class="post-info">
               <span>
-                2020-11-03
+                2020-12-08
               </span>
               <span>
-                2 min read
+                1 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>可以参考简书作者 戈德斯文：<a href="https://www.jianshu.com/p/bc747e3d8a7c">https://www.jianshu.com/p/bc747e3d8a7c</a></p>
-<p>webpack<br>
-构建工具</p>
-<p><strong>mode</strong>：根据环境做不同配置，eg区分<strong>development</strong>和<strong>production</strong></p>
-<p><strong>entry</strong>：开始构建的入口模块<br>
-三种书写方式</p>
-<pre><code>entry: &quot;./src/index.jsx&quot;,
-entry：[.'/index1.jsx',  '/index2.jsx'],
-entry: [{
-    app:'./app.jsx',
-    app2:'./app2.jsx'
-}]
-</code></pre>
-<!-- more -->
-<p><strong>output</strong>：打包后的文件路径以及文件名</p>
-<p>const path = require('path');</p>
-<pre><code>output:{
-    path: path.resolve(__dirname, 'dist'),
-    filename:[name].[contenthash].js
-}
-</code></pre>
-<p><strong>loader</strong>：将文件转换为webpack能够处理的模块</p>
-<p>常用loader</p>
-<p><strong>js</strong>：babel-loader babel-core babel-preset-es2015 babel-preset-react</p>
-<pre><code>babel-loader: babel加载器
-
-babel-preset-es2015: 支持es2015
-
-babel-preset-react: jsx 转换成js
-</code></pre>
-<p><strong>css</strong>：style-loader，css-loader，less-loader，sass-lader<br>
-注意顺序</p>
-<p><strong>jpg</strong>：url-loader，file-loader</p>
-<pre><code>url-loader需要file-loader的支持,可通过配置项设置低于limit的图片进行base64编码，从而以减少http请求
-</code></pre>
-<p><strong>plugins</strong>：插件，是webpack功能的扩展，可以处理loader处理不了的任务</p>
-<pre><code>html-webpack-plugin：使用插件实现自动引入js、css，免于手动配置
-clean-webpack-plugin：生成dist目录前会删除其他文件
-
-const { CleanWebpackPlugin } = require(&quot;clean-webpack-plugin&quot;);
-注意clean-webpack-plugin引入方式
-</code></pre>
-<p><strong>module</strong>：</p>
-<p><strong>devServer</strong>:<br>
-devServer: {<br>
-contentBase: path.join(__dirname, &quot;dist&quot;)<br>
-}<br>
-contentBase是加载哪里的资源</p>
+                <p>浏览器16.6ms 60hz 刷新<br>
+abcd</p>
+<p>可中断异步<br>
+渲染map一部分or</p>
+<p>index作key 适用于无改变数组</p>
+<p>渲染父容器不要 &amp;&amp; <div><br>
+【】.map</p>
+</div>
+不然key也有问题
+index作key的缺点在于插入删除后后继key全部失效，双缓存就没有意义了
+<p>快速了解React的新功能Suspense和Hooks : https://www.zhihu.com/lives/1051824303045246976</p>
+<p>https://zhuanlan.zhihu.com/advancing-react</p>
+<p>https://zhuanlan.zhihu.com/advancing-react</p>
+<pre><code>在render阶段的生命周期函数，因为Fiber的设计特点，可能会被打断，被打断之后，会重新被调用；而commit阶段一旦开始，就绝不会被打断，波形图与-_____-图</code></pre>
 
               </div>
               <div class="toc-container">
@@ -169,6 +140,15 @@ contentBase是加载哪里的资源</p>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://aaron-9c.github.io/shang-xia-jian-tou/">
+              <h3 class="post-title">
+                上下箭头
+              </h3>
+            </a>
+          </div>
         
 
         
